@@ -1,0 +1,22 @@
+{
+  "name": "adunanv2aspwebsdk",
+  "version": "0.1.0",
+  "description": "NV ASP SDK",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:esm": "tsc",
+    "build:cjs": "tsc -p tsconfig.build.json",
+    "build": "npm run build:esm && npm run build:cjs"
+  },
+  "peerDependencies": {
+    "rxjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
