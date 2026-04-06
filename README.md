@@ -53,7 +53,7 @@ The following terms are used throughout this document to describe key concepts a
 
 ### General  
 
-- Seamless phone number verification  
+- Seamless phone number-verification and device-phone-number retrieval based on CAMARA Number Verification version 2 standards  
 - Supports SIM-based authorization flow  
 - Supports network-based authorization flow  
 - Initialize the SDK with the preferred authorization method  
@@ -332,7 +332,7 @@ try {
 
 ```typescript
 nbaActions(result: any) {
-  if (result.sdkResult.devicePhoneNumberVerified) {
+  if (typeof result.sdkResult.devicePhoneNumber === 'string')
     // proceed to successful login
   } else {
     // handle the negative case

@@ -1,12 +1,9 @@
 // -----------------------------------------------------------------------------
 
-// Copyright © 2026 Aduna AB
-
-// Licensed under the Aduna ASP SDK Software License Agreement
+// Aduna ASP SDK Source Available Software License Agreement
 
 // -----------------------------------------------------------------------------
  
-
 export class SdkError extends Error {
   constructor(
     message: string,
@@ -89,13 +86,20 @@ export class AdunaNv2AspWebSdkClient {
   }
 
   async nba(invocationUrlResponse: any): Promise<{ sdkResult: any; mode: string }> {
-    if (!('url' in invocationUrlResponse.networkBasedAuthZData))
+
+    const nba = invocationUrlResponse.networkBasedAuthZData;
+
+    if (!nba || !('url' in nba)) {
       throw new SdkError('', this.nba_error, 'Mandatory invocation data missing');
+    }
 
     try {
+      
       const sdkResult = await this.getNetworkBasedUrl(invocationUrlResponse.networkBasedAuthZData.url);
 
-      if (!('devicePhoneNumberVerified' in sdkResult))
+      console.log('nba', 'sdkResult', sdkResult);
+
+      if (!('devicePhoneNumberVerified' in sdkResult) && !('devicePhoneNumber' in sdkResult))
         throw new SdkError('', this.nba_error, 'Verification information missing');
 
       return { sdkResult, mode: 'nba' };

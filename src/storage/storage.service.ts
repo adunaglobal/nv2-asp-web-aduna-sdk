@@ -1,12 +1,9 @@
 // -----------------------------------------------------------------------------
 
-// Copyright © 2026 Aduna AB
-
-// Licensed under the Aduna ASP SDK Software License Agreement
+// Aduna ASP SDK Source Available Software License Agreement
 
 // -----------------------------------------------------------------------------
  
-
 import { StorageAdapter } from './storage.interface';
 
 export class StorageService {
