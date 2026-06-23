@@ -1,9 +1,9 @@
-// 
+//
 // -----------------------------------------------------------------------------
 // Copyright © 2026 Aduna AB
 // Licensed under the Aduna ASP SDK Source Available Software License Agreement
 // -----------------------------------------------------------------------------
-// 
+//
  
 
 import { StorageService } from "../storage/storage.service";

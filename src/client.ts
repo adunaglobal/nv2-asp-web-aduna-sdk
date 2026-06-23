@@ -1,9 +1,9 @@
-// 
+//
 // -----------------------------------------------------------------------------
 // Copyright © 2026 Aduna AB
 // Licensed under the Aduna ASP SDK Source Available Software License Agreement
 // -----------------------------------------------------------------------------
-// 
+//
  
 export class SdkError extends Error {
   constructor(
@@ -142,10 +142,10 @@ export class AdunaNv2AspWebSdkClient {
                 credentials: [{
                   format: vpResponse.format,
                   id: vpResponse.id,
-                  meta: vpResponse.meta
+                  meta: vpResponse.meta,
+                  claims: vpResponse.claims
                 }]
               },
-              claims: vpResponse.claims,
               nonce,
               response_mode: "dc_api",
               response_type: "vp_token"

@@ -2,6 +2,9 @@
 
 ## Release Notes
 
+### 0.1.2
+ - Bug fixing and performance improvements
+
 ### 0.1.1
 #### Features
  - Support of device-phone-number retrieval for Network Based Authentication method

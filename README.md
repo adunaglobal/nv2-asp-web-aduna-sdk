@@ -179,14 +179,16 @@ This SDK version is compatible with the following Aduna and CAMARA API releases:
 | **CAMARA APIs**     |                 |          |
 | Number Verification | r3.2 / v2.1     | [Camara GitHub](https://github.com/camaraproject/NumberVerification/blob/r3.2/code/API_definitions/number-verification.yaml) |
 
-
+The offered functionality (for Android) is compatible with the following browsers:
+- Google Chrome
+- Microsoft Edge
 
 ---
 
 ## Installation  
 
 - Download or clone the repository  
-- In the SDK folder, run: `npm build`  
+- In the SDK folder, run: `npm run build`  
 - After building, run: `npm pack` to generate a `.tgz` file  
 - In your main project, take the following steps:
     Step 1: Install the SDK
